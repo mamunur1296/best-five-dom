@@ -121,19 +121,20 @@
                         </div>
                     </div>
                     <div class="my-5 ">
-                        <h1 class="text-center my-3">Budget</h1>
+                        <h1 class="text-center my-3">Budget <span id="plair-list">00</span></h1>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Per Player</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" class="form-control" id="input-cost">
                             </div>
-                            <button type="button" class="btn btn-primary w-100 my-5 btn-lg">Calculate</button>
+                            <button id="calculate-btn" type="button"
+                                class="btn btn-primary w-100 my-5 btn-lg">Calculate</button>
 
                             <div class="col-sm-8 my-3 ">
                                 <h4>Player Expenses</h4>
                             </div>
                             <div class="col-sm-4 my-3">
-                                <h4> $5000</h4>
+                                <h4> $<span id="player-exp">00</span></h4>
                             </div>
 
                             <label for="inputPassword" class=" my-3 col-sm-6 col-form-label">Manager</label>
