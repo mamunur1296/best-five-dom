@@ -37,7 +37,7 @@
     <main>
         <section class="container mt-5  ">
             <div class="row  ">
-                <div class="col-md-9 ">
+                <div class="col-md-9 gy-5 ">
                     <div class="row ">
                         <div class="col-md-4 ">
                             <div class="card ">
@@ -45,7 +45,8 @@
                                 <div class="card-body text-center">
                                     <h2>Gonzalo Montiel</h2>
                                     <p>Defender</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +56,8 @@
                                 <div class="card-body text-center">
                                     <h2>Lisand Martinez </h2>
                                     <p>Defender</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +67,8 @@
                                 <div class="card-body text-center">
                                     <h2>Marcos Senesi </h2>
                                     <p>Defender</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +78,8 @@
                                 <div class="card-body text-center">
                                     <h2>German Pezzella</h2>
                                     <p>Defender</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +89,8 @@
                                 <div class="card-body text-center">
                                     <h2>Lionel Messi</h2>
                                     <p>Forward</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +100,8 @@
                                 <div class="card-body text-center">
                                     <h2>Cristian Romero</h2>
                                     <p>Defender</p>
-                                    <button type="button" class="btn btn-primary w-100 btn-sm">SELECT</button>
+                                    <button onclick="selectBtn(this)" type="button"
+                                        class="btn btn-primary w-100 btn-sm">SELECT</button>
                                 </div>
                             </div>
                         </div>
@@ -108,27 +114,8 @@
                         <h1 class="text-center"> Selected - V </h1>
                         <div>
                             <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="col-4">1</td>
-                                        <td class="col-8">OttoOtto Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Otto</td>
-                                    </tr>
+                                <tbody id="t-body">
+
                                 </tbody>
                             </table>
                         </div>
