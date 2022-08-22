@@ -1,3 +1,7 @@
+body {
+    background-color: hwb(0 9% 90%);
+}
+
 .bg-img {
     margin-top: 150px;
     margin-bottom: 150px;
@@ -5,4 +9,21 @@
 
 #plair-list {
     display: none;
+}
+
+.header-text {
+    font-family: 'Berkshire Swash';
+    font-size: 76px;
+    color: #FF5E19;
+    font-weight: 500;
+}
+
+.my-img {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text-color-card {
+    color: rgb(189, 185, 185);
 }

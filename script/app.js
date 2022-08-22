@@ -5,9 +5,8 @@ function playerToArray(plArray) {
         const Name = plArray[i].playerName;
         const serialNo = i + 1;
         const tr = document.createElement("tr");
-        // tr.className = "hi"
         tr.innerHTML = `
-         <td class="col-4 hi">${serialNo}</td>
+         <td class="fw-bolder col-4 ">${serialNo}</td>
          <td class="col-8">${Name}</td>
         `;
         tableBody.appendChild(tr);
@@ -21,7 +20,6 @@ function selectBtn(select) {
         playerName: playerName,
     }
     playerArray.push(playerObj);
-
     if (playerArray.length >= 6) {
         select.disabled = false;
         alert("you cannot select more than 5 players")
@@ -34,13 +32,23 @@ function selectBtn(select) {
 document.getElementById("calculate-btn").addEventListener("click", function () {
     const inputfileOne = inputFildById("input-cost");
     const playerParOrder = elementFildById("plair-list");
-    const totalPlayerExp = inputfileOne * playerParOrder;
-    gatRejult("player-exp", totalPlayerExp);
+    if (isNaN(inputfileOne)) {
+        alert(" Enter your valid Number");
+        return;
+    } else {
+        const totalPlayerExp = inputfileOne * playerParOrder;
+        gatRejult("player-exp", totalPlayerExp);
+    }
 })
 document.getElementById("total-calculate-btn").addEventListener("click", function () {
     const managerCost = inputFildById("input-manager");
     const coachCost = inputFildById("input-coach");
-    const totalplayerExp = elementFildById("player-exp")
-    const inputTotalCost = totalplayerExp + managerCost + coachCost;
-    gatRejult("total-const", inputTotalCost)
+    const totalplayerExp = elementFildById("player-exp");
+    if (isNaN(coachCost)) {
+        alert(" Enter your valid Number");
+        return;
+    } else {
+        const inputTotalCost = totalplayerExp + managerCost + coachCost;
+        gatRejult("total-const", inputTotalCost)
+    }
 })
