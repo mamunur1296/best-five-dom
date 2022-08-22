@@ -1,3 +1,4 @@
+// gate and push array element function ...................
 function playerToArray(plArray) {
     const tableBody = document.getElementById("t-body");
     tableBody.innerHTML = "";
@@ -12,6 +13,7 @@ function playerToArray(plArray) {
         tableBody.appendChild(tr);
     }
 }
+// function of button onclick attribute..................
 const playerArray = [];
 function selectBtn(select) {
     select.disabled = true;
@@ -29,6 +31,7 @@ function selectBtn(select) {
     console.log(playerArray.length);
     playerToArray(playerArray);
 }
+// calculation button ..................... 
 document.getElementById("calculate-btn").addEventListener("click", function () {
     const inputfileOne = inputFildById("input-cost");
     const playerParOrder = elementFildById("plair-list");
@@ -40,8 +43,13 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
         gatRejult("player-exp", totalPlayerExp);
     }
 })
+// total price button ................
 document.getElementById("total-calculate-btn").addEventListener("click", function () {
     const managerCost = inputFildById("input-manager");
+    if (isNaN(managerCost)) {
+        alert(" Enter your valid Number");
+        return;
+    }
     const coachCost = inputFildById("input-coach");
     const totalplayerExp = elementFildById("player-exp");
     if (isNaN(coachCost)) {
@@ -52,3 +60,4 @@ document.getElementById("total-calculate-btn").addEventListener("click", functio
         gatRejult("total-const", inputTotalCost)
     }
 })
+// end of thes app.js page ...............
