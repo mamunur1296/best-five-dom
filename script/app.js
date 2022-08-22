@@ -21,10 +21,13 @@ function selectBtn(select) {
         playerName: playerName,
     }
     playerArray.push(playerObj);
-    document.getElementById("plair-list").innerText = playerArray.length;
+
     if (playerArray.length >= 6) {
+        select.disabled = false;
+        alert("you cannot select more than 5 players")
         return;
     }
+    document.getElementById("plair-list").innerText = playerArray.length;
     console.log(playerArray.length);
     playerToArray(playerArray);
 }
@@ -33,4 +36,11 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     const playerParOrder = elementFildById("plair-list");
     const totalPlayerExp = inputfileOne * playerParOrder;
     gatRejult("player-exp", totalPlayerExp);
+})
+document.getElementById("total-calculate-btn").addEventListener("click", function () {
+    const managerCost = inputFildById("input-manager");
+    const coachCost = inputFildById("input-coach");
+    const totalplayerExp = elementFildById("player-exp")
+    const inputTotalCost = totalplayerExp + managerCost + coachCost;
+    gatRejult("total-const", inputTotalCost)
 })
